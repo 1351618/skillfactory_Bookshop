@@ -1,0 +1,1 @@
+(()=>{var o={354:()=>{console.log("hello"),console.log("world")}},r={};!function e(l){var t=r[l];if(void 0!==t)return t.exports;var n=r[l]={exports:{}};return o[l](n,n.exports,e),n.exports}(354)})();

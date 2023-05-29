@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Montserrat-bold';
+    src: url('../src/fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-ExtraBold';
+    src: url('../src/fonts/Montserrat-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('../src/fonts/Montserrat-Light.ttf') format('truetype');
+}
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    /* border: 2px solid #000; */
+    background-color: #ffffff;
+    height: 116px;
+    padding: 0 8vw;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Montserrat-bold;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.headre__menu {
+    font-size: 12px;
+}
+.headre__menu a {
+    text-decoration: none;
+    color: #5C6A79;
+    margin: 20px;
+    font-family: Montserrat-ExtraBold;
+}
+a.headre__menu--activ {
+    color: #000000;
+}
+
+.header__Access-menu {
+    display: flex;
+    gap: 2.8vw;
+}
+
+
+.header__Access-menu-cart {
+    position: relative;
+}
+
+.header__Access-menu-cart-badge {
+    position: absolute;
+    top: 7px;
+    right: -4px;
+    background-color: red;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    font-size: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat-Light';
+}
