@@ -1,23 +1,38 @@
+@font-face {
+    font-family: "OpenSans";
+    src: url("../src/fonts/OpenSans.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-bold';
+    src: url('../src/fonts/Montserrat-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('../src/fonts/Montserrat-Light.ttf') format('truetype');
+}
+
+
 .main {
     margin: 116px 7vw 0px 7vw;
     max-width: 100%;
 }
 
-
+/* main__slider ====================================== */
 .main__slider {
     height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .main__slider-picture {
     aspect-ratio: 1120/702; /* Пропорция ширины к высоте */
     max-width: 1120px;
     width: 100%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .main__slider-picture--active {
@@ -34,6 +49,7 @@
     padding: 0px 5px;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .main__slider-navigation button.active svg circle {
@@ -42,9 +58,142 @@
 
 /* main__categories ================================== */
 .main__categories {
-    border: 2px solid black;
-    height: 100px;
-    width: 100px;
-    margin-top: 100px;
-    background-color: gray;
+    /* border: 2px solid black; */
+    /* height: 710px; */
+    height: 44vw;
+    /* width: 416px; */
+    width: 26vw;
+    margin-top: 6.6vw;
+    background-color: #EFEEF6;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main__categories li {
+    padding: 0.4vw 5vw 0.4vw 1vw;
+    font-family: 'Montserrat-Light';
+    font-size: 12px;
+}
+.main__categories li::marker {
+    content: none;
+}
+
+.main__categories li a {
+    text-decoration: none;
+    color: #5C6A79;
+    margin-left: 12px;
+}
+
+
+.main__categories li.activ a {
+    color: #1C2A39;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Montserrat-bold';
+    margin-left: 0px;
+}
+
+.main__categories li a.activ::before {
+    content: "\2022";
+    margin-right: 5px;
+    font-size: 25px;
+    color: #756AD3;
+}
+
+/* main__gallery ===================================== */
+.main__gallery {
+    /* border: 2px solid black; */
+    margin: 8.5vw 0px 0px 13vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-rows: auto;
+    position: relative;
+    z-index: 10;
+    row-gap: 80px;
+    column-gap: 10px;
+}
+
+.main__gallery_book {
+    /* border: 2px solid black; */
+    max-height: 400px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main__gallery_book-image {
+    /* border: 2px solid black; */
+    grid-column: 1;
+    height: auto;
+    width: 212px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+.main__gallery_book-content {
+    /* border: 2px solid black; */
+    grid-column: 2;
+    margin: 50px 0px 50px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 180px;
+}
+
+.book-author {
+    font-family: "OpenSans";
+    color: #5C6A79;
+    font-size: 10px;
+    margin-bottom: -15px;
+    cursor: pointer;
+}
+.book-title {
+    font-family: 'Montserrat-bold';
+    font-size: 16px;
+    margin-bottom: -10px;
+    cursor: pointer;
+}
+.book-reiting {
+    font-family: "OpenSans";
+    font-size: 10px;
+    color: #5C6A79;
+}
+.book-description {
+    font-family: "OpenSans";
+    font-size: 10px;
+    color: #5C6A79;
+}
+.book-price {
+    font-family: 'Montserrat-bold';
+    font-size: 13px;
+}
+
+.book-button_buy {
+    height: 45px;
+    width: 176px;
+    color: #4C3DB2;
+    border-color: #4C3DB2;
+    background-color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* main__Load-more ============================== */
+
+.main__Load-more {
+    display: flex;
+    justify-content: center;
+    margin: 8.5vw 0px 0px 13vw;
+}
+.main__Load-more_button {
+    height: 45px;
+    width: 176px;
+    color: #4C3DB2;
+    border-color: #4C3DB2;
+    background-color: #fff;
+    font-weight: bold;
+    cursor: pointer;
 }
