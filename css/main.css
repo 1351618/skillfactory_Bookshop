@@ -95,7 +95,7 @@
 }
 
 
-.main__categories li.activ a {
+.main__categories li.activ {
     color: #1C2A39;
     font-size: 16px;
     font-weight: bold;
@@ -103,7 +103,7 @@
     margin-left: 0px;
 }
 
-.main__categories li a.activ::before {
+.main__categories li.activ::before {
     content: "\2022";
     margin-right: 5px;
     font-size: 25px;
@@ -140,6 +140,8 @@
     flex-direction: column;
     justify-content: center;
     cursor: pointer;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+    background-color: gainsboro;
 }
 .main__gallery_book-content {
     /* border: 2px solid black; */
