@@ -9,33 +9,7 @@ console.log("test ==== Google_Books_API")
 // https://www.googleapis.com/books/v1/volumes?q="subject:Business"&key=AIzaSyBue5Jx2i1cFC8-u06kdi6MhteRchM5lCY&printType=books&startIndex=0&maxResults=6&langRestrict=en
 
 
-// fetch('https://www.googleapis.com/books/v1/volumes?q=subject:Business&maxResults=6&langRestrict=en')
-//   .then(response => response.json())
-//   .then(data => {
-//     // Доступ к массиву книг
-//     const books = data.items;
-
-//     // Проход по каждой книге и вывод информации в консоль
-//     books.forEach(book => {
-//       const title = book.volumeInfo.title;
-//       const authors = book.volumeInfo.authors;
-//       const description = book.volumeInfo.description;
-
-//       console.log('Название:', title);
-//       console.log('Авторы:', authors);
-//       console.log('Описание:', description);
-//       console.log('---------------------');
-//     });
-
-//     // Выполнение других операций с данными книг
-//     // ...
-//   })
-//   .catch(error => {
-//     console.error('Произошла ошибка:', error);
-//   });
-
-
-// вариант 2 
+const imagePath = 'src/image/placeholder.png'; // Путь к заглушки
 
 function truncateDescription(description, maxWords) {
     if (!description) {
@@ -76,8 +50,11 @@ function truncateDescription(description, maxWords) {
         imageElement.classList.add('main__gallery_book-image');
         const imgElement = document.createElement('img');
         imgElement.classList.add('book-image');
-        imgElement.src = thumbnail || 'src/image/placeholder.png'; // Заглушка для изображения
-        imgElement.alt = '';
+  
+        if (imgElement) {
+          imgElement.src = thumbnail || imagePath; // Заглушка для изображения
+          imgElement.alt = 'thumbnail';
+        }
   
         imageElement.appendChild(imgElement);
   
