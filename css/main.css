@@ -140,8 +140,8 @@
     flex-direction: column;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-    background-color: gainsboro;
+    /* box-shadow: 0 0 50px rgba(0, 0, 0, 0.3); */
+    /* background-color: gainsboro; */
 }
 .main__gallery_book-content {
     /* border: 2px solid black; */
@@ -151,6 +151,10 @@
     flex-direction: column;
     justify-content: space-between;
     width: 180px;
+}
+
+.book-image {
+    box-shadow: 0 0 70px rgba(0, 0, 0, 0.5);
 }
 
 .book-author {
